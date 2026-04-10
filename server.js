@@ -25,6 +25,10 @@ async function connectDB() {
 
 connectDB();
 
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀");
+})
+
 
 app.post("/query", async (req, res) => {
   try {
@@ -70,9 +74,7 @@ app.post("/query", async (req, res) => {
 //   }
 // });
 
-app.get("/", (req, res) => {
-  res.send("Server is running 🚀");
-});
+;
 
 app.listen(5000, () => {
   console.log("Server running 🚀");
